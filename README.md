@@ -1,5 +1,5 @@
 ## Xgboost_Model & Deploymnet
-### This Repo is a Xgboost ML Model and deployment of the Model using Flask, and host a server via heroku
+### This Repo is an Xgboost ML Model and deployment of the Model using Flask, and host a server via heroku
 ------------
 ### You can reach from this [Link](https://xgboost-flask-deploy.herokuapp.com/)
 --------------
