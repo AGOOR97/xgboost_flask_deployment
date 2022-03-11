@@ -46,7 +46,7 @@ def predict():
 def predict_batch():
     if request.method == 'POST':
         file_path = request.form['upload_file']
-        if file_path:
+        if file_path != '':
             df_batch = pd.read_excel(file_path, sheet_name='Sheet1')
             age = np.array([*df_batch.to_dict()['AGE'].values()])
             fc = np.array([*df_batch.to_dict()['FC%'].values()])

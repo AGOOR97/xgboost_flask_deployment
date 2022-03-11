@@ -9,7 +9,7 @@
 <h2> Home </h2>
 <br>
 <div>
-    <div class="bg-light p-5 rounded">
+    <div class="bg-light p-4 rounded">
         <div class="col-sm-12 mx-auto">
             <h4>Regression Model for predicting DELTA</h4>
             <hr>
@@ -39,7 +39,8 @@
                     The Algorithm achieve about r2-score = 67.5 % on validation Dataset.
                 </li>
             </ul>
-
+            <hr>
+            <br>
             <p>
                 <a class="btn btn-primary" href="/predict" role="button">Predict one Instance &raquo;</a>
                 <a class="btn btn-success float-right" href="/predict_batch" role="button">Predict batch of Instances
@@ -48,5 +49,21 @@
         </div>
     </div>
 </div>
+</div>
+
+
+<br>
+<div class="b-example-divider"></div>
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <span class="text-muted">&copy; 2022, All rights reserved</span>
+        </div>
+    </footer>
 </div>
 {% endblock %}
