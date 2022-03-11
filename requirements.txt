@@ -6,3 +6,4 @@ scikit_learn==1.0.2
 scipy==1.7.1
 gunicorn
 openpyxl
+xgboost
