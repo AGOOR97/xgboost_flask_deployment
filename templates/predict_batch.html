@@ -1,0 +1,45 @@
+{% extends 'basic.html' %}
+
+{% block head %}
+<title> Predict batch</title>
+{% endblock %}
+
+{% block body %}
+    <br>
+    <h4> Predict batch of Instances </h4>
+    <hr>
+    <ul>
+        <li> Upload your Excel File with columns (AGE, FC%, LC(ft/mile), TC(ft/mile), RUT(in)) respectively</li>
+        <li> The Sheet must be named with (Sheet1)</li>
+    </ul>
+    
+    <hr>
+    <form action="/predict_batch" method="POST">
+        <div class="form-group">
+            <input type="file" name="upload_file" > 
+            <br>
+            <br>
+            <input type="submit" value="Predict" class="btn btn-success btn-lg btn-block" >
+
+        </div>
+
+    
+    <!-- <p> {{ predictions }}</p> -->
+    <form action="/predict_batch" method="POST">
+        <div class="form-group">
+            <input type="submit" value="Download" class="btn btn-primary float-right" >
+
+        </div>
+    </form>
+
+    <div>
+        {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
+    </form>
+
+    
+    
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'basic.html' %}
+
+{% block head %}
+<title> Home </title>
+{% endblock %}
+
+{% block body %}
+<br>
+<h2> Home </h2>
+<br>
+<div>
+    <div class="bg-light p-5 rounded">
+        <div class="col-sm-12 mx-auto">
+            <h4>Regression Model for predicting DELTA</h4>
+            <hr>
+            <h5> Problem Definition </h5>
+            <ul>
+                <li>The Dataset consists of 6 Columns.</li>
+                <li>Dependent Column (the target) is (DELTA).</li>
+                <li>Independent Columns are (AGE, FC%, LC(ft/mile), TC(ft/mile), RUT(in)).</li>
+                <li>
+                    The Distribution of (AGE & RUT(in)) Columns is exponential Distribution, using box-cox
+                    tramsformation
+                    to optimize the Distribution to be Normal Distribution is better to help model learn and train
+                    correctly.
+                </li>
+                <li>
+                    The Distribution of (DELTA (target)) is also exponential and containing zeros, taking
+                    the natural log(value+1) to also optimize the Distribution to be Normal, and after Model predicts
+                    the values to reverse what we did, by taking the (exponential(value) - 1).
+                </li>
+                <li>
+
+
+                    The best Algorithm is (xgboost) an algorithm based on Adaboost (Algorithm)
+                    <a href="https://towardsdatascience.com/understanding-adaboost-2f94f22d5bfe">Understand Adaboost</a>
+                </li>
+                <li>
+                    The Algorithm achieve about r2-score = 67.5 % on validation Dataset.
+                </li>
+            </ul>
+
+            <p>
+                <a class="btn btn-primary" href="/predict" role="button">Predict one Instance &raquo;</a>
+                <a class="btn btn-success float-right" href="/predict_batch" role="button">Predict batch of Instances
+                    &raquo;</a>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
