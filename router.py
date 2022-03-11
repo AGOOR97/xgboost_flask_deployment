@@ -7,7 +7,7 @@ from utils import process_one, process_batch   ## the function I craeted to proc
 
 
 
-## Intialize the Flask APp
+## Intialize the Flask APP
 app = Flask(__name__)
 
 ## Loading the Model
