@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 from flask import Flask, redirect, render_template, request
-import joblib
+import joblib, os
 from utils import process_one, process_batch   ## the function I craeted to process the data in utils.py
 
 
@@ -71,6 +71,14 @@ def predict_batch():
     else:
         df_pred = pd.DataFrame(columns=['Predictions'])
         return render_template('predict_batch.html', tables=[df_pred.to_html(classes='data')], titles=df_pred.columns.values)
+
+
+## Route for about_us page
+@app.route('/about_us')
+def about_us():
+
+
+    return render_template('about.html')
 
 ## Run the App
 if __name__ == '__main__':
